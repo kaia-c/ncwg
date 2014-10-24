@@ -89,22 +89,23 @@
 		</nav>		
 		<section id="mainSection">
 		<form id="form1">
-			<span id="print1">
 			<div><h2>&nbspEnter New Patient</h2></div>
 			<div>
+			<span id="print1">
 			<table id="general1">
-			<tr><th colspan="3">Personal</th></tr>
-			<tr><td>*&nbsp;First:<input type="text" id="first" autofocus required></td>
-			<td>MI: <input type="text" id="mi" size="1" maxlength="1"></td>
-			<td class="left">*&nbspLast:<input type="text" id="last" required></td></tr>
-			<tr><td>*&nbsp;Birthdate:<input type="date"></td>
-			<td>*&nbsp;SSN:<input type="password" size="12" placeholder="XXX-XX-XXXX" required pattern="d{3}-d{2}-d{4}" title="Please enter like XXX-XX-XXXX"></td>
-			<td><table>
-				<tr><td rowspan="2">*&nbsp;Gender:</td>
-				<td><label for="female">Female</td><td></label><input type="radio" name="gender" id="female"></td></tr>
-				<td><label for="male">Male</td><td></label><input type="radio" name="gender" id="male"></td></tr>
-				</table>
-			</td></tr></table>
+				<tr><th colspan="3">Personal</th></tr>
+				<tr><td>*&nbsp;First:<input type="text" id="first" autofocus required></td>
+				<td>MI: <input type="text" id="mi" size="1" maxlength="1"></td>
+				<td class="left">*&nbspLast:<input type="text" id="last" required></td></tr>
+				<tr><td>*&nbsp;Birthdate:<input type="date"></td>
+				<td>*&nbsp;SSN:<input type="password" size="12" placeholder="XXX-XX-XXXX" required pattern="d{3}-d{2}-d{4}" title="Please enter like XXX-XX-XXXX"></td>
+				<td><table>
+					<tr><td rowspan="2">*&nbsp;Gender:</td>
+					<td><label for="female">Female</td><td></label><input type="radio" name="gender" id="female"></td></tr>
+					<td><label for="male">Male</td><td></label><input type="radio" name="gender" id="male"></td></tr>
+					</table>
+				</td></tr>
+			</table>
 			</div>
 			<div>
 			<table>
@@ -254,28 +255,29 @@
 		<!--FORM 3 (history)--->
 		<form id="form3" action="DontClickMe/addPatientRecord.php" method="post" enctype="mutipart/form-data">
 			<div><h2>&nbsp;Enter New Patient</h2></div>
-			<span id="print3">
 			<div>
-				<table>
-					<tr><th colspan="3">Patient Health Ratings</th></tr>
-					</tr><td><label for="overallHealth">Patient Rating of Overall Health</label></td>
-					<td colspan="2"><input type="range" id="range" name="overallHealth" min="0" max="10" step="1"></td></tr>
-					<tr><td></td><td colspan="2"><table id="numberLabels"><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr></table></td></tr>
-					</tr><td><label for="todayHealth">Patient Rating of Health Today</label></td>
-					<td colspan="2"><input type="range" id="range" name="todayHealth" min="0" max="10" step="1"></td></tr>
-					<tr><td>Primary Reason for Seeking Treatment:</td><td rowspan=2><input type="text" id="reason" required></td></tr>
-				</table>
-			</div><div>
-				<table>
-					<tr><th colspan="3">Method of Obtaining Health Record</th></tr>
-					<tr><td rowspan="3">Is this patient:</td>
-					<td id="right"><label for="q1">pre-intake (Enter Health History after first visit)</label></td>
-					<td><input type="radio" name="historyStatus" id="q1" onclick="historyQs(1)"></td></tr>
-					<td><label for="q2">a person with an existing MedRecord+</label></td>
-					<td><input type="radio" name="historyStatus" id="q2" onclick="historyQs(2)"></td></tr>
-					<td><label for="q3">ready to upload Health History form</label></td>
-					<td><input type="radio" name="historyStatus" id="q3" onclick="historyQs(3)"></td></tr>
-				</table>
+			<span id="print3">
+			<table>
+				<tr><th colspan="3">Patient Health Ratings</th></tr>
+				</tr><td><label for="overallHealth">Patient Rating of Overall Health</label></td>
+				<td colspan="2"><input type="range" id="range" name="overallHealth" min="0" max="10" step="1"></td></tr>
+				<tr><td></td><td colspan="2"><table id="numberLabels"><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr></table></td></tr>
+				</tr><td><label for="todayHealth">Patient Rating of Health Today</label></td>
+				<td colspan="2"><input type="range" id="range" name="todayHealth" min="0" max="10" step="1"></td></tr>
+				<tr><td>Primary Reason for Seeking Treatment:</td><td rowspan=2><input type="text" id="reason" required></td></tr>
+			</table>
+			</span>
+		</div><div>
+			<table>
+				<tr><th colspan="3">Method of Obtaining Health Record</th></tr>
+				<tr><td rowspan="3">Is this patient:</td>
+				<td id="right"><label for="q1">pre-intake (Enter Health History after first visit)</label></td>
+				<td><input type="radio" name="historyStatus" id="q1" onclick="historyQs(1)"></td></tr>
+				<td><label for="q2">a person with an existing MedRecord+</label></td>
+				<td><input type="radio" name="historyStatus" id="q2" onclick="historyQs(2)"></td></tr>
+				<td><label for="q3">ready to upload Health History form</label></td>
+				<td><input type="radio" name="historyStatus" id="q3" onclick="historyQs(3)"></td></tr>
+			</table>
 			<table id="healthHistory" class="center"></table>
 			<script>
 			function historyQs(num){
@@ -283,7 +285,6 @@
 			}
 			</script>
 			</div>
-			</span>
 			<div><div class="indent" id="printButton"><input type="button" value="Print Patient Entry" id="button" onclick="printForms()"></div></div>
 			<iframe name="printFrame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
 			<div class="indent">
@@ -291,18 +292,18 @@
 			</div>
 		</form>
 		<script>
-			function stageForm(spanID){
-				window.frames["printFrame"].document.body.innerHTML+=document.getElementById(spanID).innerHTML;
-			}
-			function printForms(){
-				stageForm("print1");
-				stageForm("print2");
-				stageForm("print3");
-				window.frames["printFrame"].window.focus();
-				window.frames["printFrame"].window.print();
-				setTimeout('window.close()', 1000);
-				return false;
-			}
+		function stageForm(spanID){
+			window.frames["printFrame"].document.body.innerHTML+=document.getElementById(spanID).innerHTML;
+		}
+		function printForms(){
+			stageForm("print1");
+			stageForm("print2");
+			stageForm("print3");
+			window.frames["printFrame"].window.focus();
+			window.frames["printFrame"].window.print();
+			setTimeout('window.close()', 1000);
+			return false;
+		}
 		</script>
 		</section>
 	</section>
