@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>New Century Wellness ~ Intranet</title>
+	<link rel="shortcut icon" href="DontClickMe/ncwgfv.ico">
+	<link rel="stylesheet" href="DontClickMe/ncwgForm.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>	
+</head>
+<body>
+	<header>
+		<img src="DontClickMe/ncwgPic.gif" alt="NCWG" height="90">
+		<hgroup>
+			<h1>New Century Wellness Group</h1>
+			<h2>Employee Portal</h2>
+		</hgroup>
+		<table>
+			<tr>
+				<td><h3> &nbsp!&nbsp </h3></td>
+				<td><h4> &nbsp <a href="#">1 Urgent</a> &nbsp </h4></td>
+				<td rowspan="2"><span class="indent"><button class="minIndent">Company Memos</button></span></td>
+			</tr>
+			<tr><td></td><td><h4><a href="#">2 New</a> &nbsp </h4></td></tr>
+		</table>
+		<nav>
+			<ul class="nav">
+				<li><a href="#">Employee<sub>&nbsp;&#8681;</sub></a>
+				<ul>
+					<li><a href="#">Clock-In</a></li>
+					<li><a href="#">Clock-out</a></li>
+					<li><a href="#">Access Benefits</a></li>
+					<li><a href="#">Time-Off Request</a></li>
+					<li><a href="#">HR News</a></li>
+					<li><a href="#">Change Password</a></li>
+				</ul></li>
+				<!--Clock-In, Clock-out, Access Benefits, Time-Off Request, HR News, Change Password-->
+				<li><a class="current" href="#">Patient<sub>&nbsp;&nbsp;&nbsp;&nbsp;&#8681;</sub></a><!--Enter New, Update, MedRecords Lookup -->
+				<ul>
+					<li><a href="index.html" class="current">Enter New</a></li>
+					<li><a href="#">Update</a></li>
+					<li><a href="#">MedRecords Lookup</a></li>
+				</ul></li>
+				<li><a href="#">Schedule<sub>&nbsp;&nbsp;&#8681;</sub></a>
+				<ul>
+					<li><a href="#">New Appointment</a></li>
+					<li><a href="#">Cancel Appointment</a></li>
+					<li><a href="#">View/Confirm Upcoming Appointments</a></li>
+					<li><a href="#">Doctor Schedules</a></li>
+				</ul></li>
+				<!--New Appointment, Cancel Appointment, View/Confirm Upcoming Appointments, Doctor Schedules-->
+			</ul>
+		</nav>
+		<nav>
+	</header>
+	<section>
+		<nav>
+			<ul>
+			<script>
+					function general(){
+						document.getElementById('form1').style.display="block";
+						document.getElementById('f1').setAttribute("class","current");
+						document.getElementById('form2').style.display="none";
+						document.getElementById('f2').setAttribute("class","inactive");
+						document.getElementById('form3').style.display="none";
+						document.getElementById('f3').setAttribute("class","inactive");
+					}
+					function billing(){
+						document.getElementById('form1').style.display="none";
+						document.getElementById('f1').setAttribute("class","inactive");
+						document.getElementById('form2').style.display="block";
+						document.getElementById('f2').setAttribute("class","current");
+						document.getElementById('form3').style.display="none";
+						document.getElementById('f3').setAttribute("class","inactive");
+					}
+					function history(){
+						document.getElementById('form1').style.display="none";
+						document.getElementById('f1').setAttribute("class","inactive");
+						document.getElementById('form2').style.display="none";
+						document.getElementById('f2').setAttribute("class","inactive");
+						document.getElementById('form3').style.display="block";
+						document.getElementById('f3').setAttribute("class","current");
+					}
+				</script>
+				<li><a id="f1" class="current" href="#" onclick="general()">General</a></li>
+				<li><a id="f2" class="inactive" href="#" onclick="billing()">Billing</a></li>
+				<li><a id="f3" class="inactive" href="#" onclick="history()">Health History</a></li>
+			</ul>
+		</nav>		
+		<section id="mainSection">
+		<form id="form1">
+			<div><h2>&nbspEnter New Patient</h2></div>
+			<div>
+			<table id="general1">
+			<tr><th colspan="3">Personal</th></tr>
+			<tr><td>*&nbsp;First:<input type="text" id="first" autofocus required></td>
+			<td>MI: <input type="text" id="mi" size="1" maxlength="1"></td>
+			<td class="left">*&nbspLast:<input type="text" id="last" required></td></tr>
+			<tr><td>*&nbsp;Birthdate:<input type="date"></td>
+			<td>*&nbsp;SSN:<input type="password" size="12" placeholder="XXX-XX-XXXX" required pattern="d{3}-d{2}-d{4}" title="Please enter like XXX-XX-XXXX"></td>
+			<td><table>
+				<tr><td rowspan="2">*&nbsp;Gender:</td>
+				<td><label for="female">Female</td><td></label><input type="radio" name="gender" id="female"></td></tr>
+				<td><label for="male">Male</td><td></label><input type="radio" name="gender" id="male"></td></tr>
+				</table>
+			</td></tr></table>
+			</div>
+			<div>
+			<table>
+			<tr><th colspan="3">Contact Information</th></tr>
+			<tr><th>Contact Method</th><th>Primary Number? (choose one)</th><th>Can we leave a message?</th></tr>
+			<tr><td>Home Phone: <input type="text" id="hPhone"  placeholder="NULL" required></td>
+			<td><input type="radio" value="hPrimary"  name="primary"></td>
+			<td><input type="checkbox" value="hMessage" id="message"></td></tr>
+			<tr><td>Cell Phone: <input type="text" id="cPhone" placeholder="NULL" required></td>
+			<td><input type="radio" value="cPrimary"  name="primary"></td>
+			<td><input type="checkbox" value="vMessage" id="message"></td></tr>
+			<tr><td>Work Phone: <input type="text" id="wPhone" placeholder="NULL" required></td>
+			<td><input type="radio" value="wPrimary"  name="primary"></td>
+			<td><input type="checkbox" value="wMessage" id="message"></td></tr>
+			<tr><td>E-mail: <input type="email" id="email" placeholder="NULL@NULL.com" required></td><td>N/A</td>
+			<td><input type="checkbox" value="eMessage" id="message"></td></tr>
+			<tr><th colspan="3" >Patient Address</th></tr>
+			<tr><td class="left">Appt# :<input type="text" size="5" id="ApptNo" placeholder="NULL" required></td>
+			<td colspan="2" class="left">*&nbspStreet:<input type="text" size="35" id="street" required></td></tr>
+			<td>*&nbspCity:<input type="text" size="18" id="city" required></td>
+			<td class="left" colspan="2">*&nbsp;State:<input type="text" size="16" id="state" required>
+			&nbsp*&nbsp;Zip:<input type="text" size="10" id="zip" required pattern="\d{5}([\s]?[\-]?[\s]?\d{4})?" title="Must enter like 55555 or 55555-555"></td></tr>
+			</table>
+			</div>
+			<div>
+			<table required>
+				<tr><th colspan="6">Marital Information</th></tr>
+				<tr><td>&nbspMarried <input type="radio" value="Spouse" name="marital" onChange="add(this.value)"></td>
+			    <td>&nbspIn Partnership <input type="radio" value="Partner" name="marital" onChange="add(this.value)"></td>			
+				<td>&nbspSingle <input type="radio" value="single" name="marital" onChange="removeAdded()"></td>
+				<td>&nbspDivorced <input type="radio" value="divorced" name="marital" onChange="removeAdded()"></td>
+				<td>&nbspSeperated <input type="radio" value="separated" name="marital" onChange="removeAdded()"></td>
+				<td>&nbspWidowed <input type="radio" value="widowed" name="marital" onChange="removeAdded()"></td></tr>
+			</table>
+			<table id="spouseInfo">
+			</table>
+				<script>
+					function add(val){
+						addedQs='<tr><th colspan="3">'+val+'\'s Information</th></tr>'
+						+'<tr><td>*&nbsp;'+val+'\'s First Name: <input type="text" id="spFirst" autofocus  required></td>'
+						+'<td>MI: <input type="text" id="spMi" size="1" maxlength="1"></td>'
+						+'<td class="left">*&nbsp;Last: <input type="spLast" id="last"  required></td></tr>'
+						+'<tr><td>*&nbsp;'+val+'\'s Primary Phone: <input type="spPhone" id="last"  required></td>'
+						+'<td style="text-align:right;">*&nbsp;'+val+'\'s Primary Email: </td>'
+						+'<td class="left"><input type="spEmail" id="last" required></td></tr>';
+						document.getElementById("spouseInfo").innerHTML = addedQs;
+					}
+					function removeAdded(){
+						document.getElementById("spouseInfo").innerHTML = "";					
+					}
+				</script>
+			</div>
+			<div class="indent">
+			<input type="submit" id="button" value="Continue" onclick="billing()">
+			</div>
+		</form>
+		
+		
+		<!--FORM 2 (billing)--->
+		<form id="form2">
+			<div><h2>&nbspEnter New Patient</h2></div>
+			<div id="billingPage">
+				<table>
+					<tr><th>Enter Billing Details:</th>
+					<td><label for="private">Private Insurance</label></br>
+					<input type="radio" name="InsStatus" id="private" value="private" onClick="addIns()"></td>
+					<td><label for="public">Medicaid/Medicare</label></br>
+					<input type="radio" name="InsStatus" id="public" value="public" onClick="addIns()"></td>
+					<td><label for="noIns">Self-Pay</label></br>
+					<input type="radio" name="InsStatus" id="noIns" value="noIns" onclick="addPrivatePay()"></td></tr>
+				</table>
+				<table id="billingDetails"></table>
+				<table id="billingDetails2"><tr><td><input type="hidden" onClick="addOtherPayer()"></td></tr></table>
+				<table id="billingDetails3"><tr><td><input type="hidden" onClick="addBillingAddress()"></td></tr></table>
+				<script>
+					function removeIns(){
+						document.getElementById("billingDetails").innerHTML = "";
+						removeDetails2();
+						removeDetails3();
+					}
+					function addIns(){
+						removeIns();	
+						addedQs='<tr><td>*&nbsp;Company Name:<input type="text" size="12" required></td>'
+							+'<td>*&nbsp;Policy #<input type="text" size="20" required></td>'
+							+'<td>*&nbsp;Group #<input type="text" placeholder="NULL" size="15" required></td></tr>'
+							+'<tr><td class="left">*&nbsp;PO Box:<input type="text" size="15" id="insPO"  required></td>'
+							+'<td colspan="2" class="left">*&nbspStreet:<input type="text" size="35" id="insStreet"'
+							+'required></td></tr><td>*&nbsp;City:<input type="text" size="18" id="insCity" required></td>'
+							+'<td class="left" colspan="2">*&nbsp;State:<input type="text" size="16" id="insState" required>'
+							+'&nbsp*&nbsp;Zip:<input type="text" size="10" id="insZip" required'
+							+'pattern="\d{5}([\s]?[\-]?[\s]?\d{4})?" title="Must enter like 55555 or 55555-555"></td></tr>';
+						document.getElementById("billingDetails").innerHTML = addedQs;
+					}
+					function addPrivatePay(){
+						removeIns();
+						addedQs='<tr><td rowspan="2" style="text-align:right;">Responsible Party:</td>'
+							+'<td style="text-align:right;padding-right:100px;"><label for="patientPays">Patient &nbsp;</label>'
+							+'<input type="radio" name="whoPays" id="patientPays" value="self" onclick="removeDetails2()"></td>'
+							+'<td rowspan="2" style="text-align:right;">Billing Address:</td>'
+							+'<td style="text-align:right;padding-right:100px;">'
+							+'<label for="billAddress">Same as Patient Address &nbsp;</label>'
+							+'<input type="radio" name="billAddress" id="billAddress" value="same"'
+							+'onclick="removeDetails3()"></td></tr><tr><td style="text-align:right;padding-right:100px;">'
+							+'<label for="otherPays">Other &nbsp;</label>'
+							+'<input type="radio" name="whoPays" id="otherPays" value="other" onClick="addOtherPayer()"></td>'
+							+'<td style="text-align:right;padding-right:100px;"><label for="billAddress">Other &nbsp;</label>'
+							+'<input type="radio" name="billAddress" id="billAddress"'
+							+'value="other" onClick="addBillingAddress()"></td></tr>'
+						document.getElementById("billingDetails").innerHTML = addedQs;
+					}
+					function addOtherPayer(){
+						addedQs='<table style="text-align:right;"><tr><th colspan="3">Responsible Party\'s Personal Information</th></tr>'
+						+'<tr><td>*&nbsp;First:<input type="text" id="payerFirst" autofocus placeholder="NULL" required></td>'
+						+'<td>MI: <input type="text" id="payerMi" size="1" maxlength="1"></td>'
+						+'<td class="left">*&nbspLast:<input type="text" id="payerLast" placeholder="NULL" required></td></tr>'
+						+'<td colspan="3" id="center">*&nbsp;SSN:<input type="password" size="12" placeholder="XXX-XX-XXXX"'
+						+'required pattern="d{3}-d{2}-d{4}" title="Please enter like XXX-XX-XXXX"></td></tr></table>';
+						document.getElementById("billingDetails2").innerHTML = addedQs;
+					}
+					function removeDetails2(){
+						document.getElementById("billingDetails2").innerHTML = "";
+					}
+					function addBillingAddress(){
+						addedQs='<tr><th colspan="3">Billing Address</th></tr>'
+						+'<tr><td class="left">Appt# :<input type="text" size="5" id="ApptNo" placeholder="NULL"'
+						+'required></td><td colspan="2" class="left">*&nbspStreet:<input type="text" size="35" id="street"' 
+						+'placeholder="NULL" required></td></tr><td>*&nbspCity:<input type="text" size="18" id="city"'
+						+'placeholder="NULL" required></td><td class="left" colspan="2">*&nbsp;State:<input type="text"'
+						+'size="16" id="state" placeholder="NULL" required>&nbsp*&nbsp;Zip:<input type="text" size="10"'
+						+'id="zip" required placeholder="NULL" title="Must enter like 55555 or 55555-555"></td></tr>';
+						document.getElementById("billingDetails3").innerHTML = addedQs;
+					}
+					function removeDetails3(){
+						document.getElementById("billingDetails3").innerHTML = "";
+					}
+				</script>
+			</div>
+			<div class="indent">
+				<input type="submit" id="button" value="Continue" onclick="history()">
+			</div>
+		</form>
+		
+		
+		<!--FORM 3 (history)--->
+		<form id="form3" action="DontClickMe/addPatientRecord.php" method="post" enctype="mutipart/form-data">
+			<div><h2>&nbsp;Enter New Patient</h2></div>
+			<div>
+			<table>
+				<tr><th colspan="3">Patient Health Ratings</th></tr>
+				</tr><td><label for="overallHealth">Patient Rating of Overall Health</label></td>
+				<td colspan="2"><input type="range" id="range" name="overallHealth" min="0" max="10" step="1"></td></tr>
+				<tr><td></td><td colspan="2"><table id="numberLabels"><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr></table></td></tr>
+				</tr><td><label for="todayHealth">Patient Rating of Health Today</label></td>
+				<td colspan="2"><input type="range" id="range" name="todayHealth" min="0" max="10" step="1"></td></tr>
+				<tr><td>Primary Reason for Seeking Treatment:</td><td rowspan=2><input type="text" id="reason" required></td></tr>
+			</table>
+		</div><div>
+			<table>
+				<tr><th colspan="3">Method of Obtaining Health Record</th></tr>
+				<tr><td rowspan="3">Is this patient:</td>
+				<td id="right"><label for="q1">pre-intake (Enter Health History after first visit)</label></td>
+				<td><input type="radio" name="historyStatus" id="q1" onclick="historyQs(1)"></td></tr>
+				<td><label for="q2">a person with an existing MedRecord+</label></td>
+				<td><input type="radio" name="historyStatus" id="q2" onclick="historyQs(2)"></td></tr>
+				<td><label for="q3">ready to upload Health History form</label></td>
+				<td><input type="radio" name="historyStatus" id="q3" onclick="historyQs(3)"></td></tr>
+			</table>
+			<table id="healthHistory" class="center"></table>
+			<script>
+			function historyQs(num){
+				document.getElementById("healthHistory").innerHTML = (num===1)?"Patient Entry Complete. Please Submit New Patient.</td></tr>":(num==2)?". . . Patient MedRecord+ file found! Please Submit New Patient.</td></tr>":'<tr><td><label for="fileUpload">Upload a completed Health History form:</label><td id="center"><input type="file" id="fileUpload"></td></tr>';
+			}
+			</script>
+			</div>
+			<div class="indent">
+				<input type="submit" id="buttonDone" value="Submit" onclick()="general()">
+			</div>
+		</form>
+		</section>
+	</section>
+</body>
+</html>
