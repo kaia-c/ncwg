@@ -364,8 +364,8 @@ form>div:last-child{
 	text-align:center;
 	vertical-align: top;
 	border-right:1px solid #000;
-	max-width:17.8px;
-	min-width:17.8px;
+	max-width:17px;
+	min-width:17px;
 	letter-spacing:-.2em;
 	font-size:.8em;
 }
@@ -383,9 +383,6 @@ form>div:last-child{
 
 width:200px;
 }
-
-
-
 
 
 .left, #left {
