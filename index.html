@@ -254,29 +254,28 @@
 		<!--FORM 3 (history)--->
 		<form id="form3" action="DontClickMe/addPatientRecord.php" method="post" enctype="mutipart/form-data">
 			<div><h2>&nbsp;Enter New Patient</h2></div>
-			<div>
 			<span id="print3">
-			<table>
-				<tr><th colspan="3">Patient Health Ratings</th></tr>
-				</tr><td><label for="overallHealth">Patient Rating of Overall Health</label></td>
-				<td colspan="2"><input type="range" id="range" name="overallHealth" min="0" max="10" step="1"></td></tr>
-				<tr><td></td><td colspan="2"><table id="numberLabels"><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr></table></td></tr>
-				</tr><td><label for="todayHealth">Patient Rating of Health Today</label></td>
-				<td colspan="2"><input type="range" id="range" name="todayHealth" min="0" max="10" step="1"></td></tr>
-				<tr><td>Primary Reason for Seeking Treatment:</td><td rowspan=2><input type="text" id="reason" required></td></tr>
-			</table>
-		</div><div>
-			<table>
-				<tr><th colspan="3">Method of Obtaining Health Record</th></tr>
-				<tr><td rowspan="3">Is this patient:</td>
-				<td id="right"><label for="q1">pre-intake (Enter Health History after first visit)</label></td>
-				<td><input type="radio" name="historyStatus" id="q1" onclick="historyQs(1)"></td></tr>
-				<td><label for="q2">a person with an existing MedRecord+</label></td>
-				<td><input type="radio" name="historyStatus" id="q2" onclick="historyQs(2)"></td></tr>
-				<td><label for="q3">ready to upload Health History form</label></td>
-				<td><input type="radio" name="historyStatus" id="q3" onclick="historyQs(3)"></td></tr>
-			</table>
-			</span>
+			<div>
+				<table>
+					<tr><th colspan="3">Patient Health Ratings</th></tr>
+					</tr><td><label for="overallHealth">Patient Rating of Overall Health</label></td>
+					<td colspan="2"><input type="range" id="range" name="overallHealth" min="0" max="10" step="1"></td></tr>
+					<tr><td></td><td colspan="2"><table id="numberLabels"><tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr></table></td></tr>
+					</tr><td><label for="todayHealth">Patient Rating of Health Today</label></td>
+					<td colspan="2"><input type="range" id="range" name="todayHealth" min="0" max="10" step="1"></td></tr>
+					<tr><td>Primary Reason for Seeking Treatment:</td><td rowspan=2><input type="text" id="reason" required></td></tr>
+				</table>
+			</div><div>
+				<table>
+					<tr><th colspan="3">Method of Obtaining Health Record</th></tr>
+					<tr><td rowspan="3">Is this patient:</td>
+					<td id="right"><label for="q1">pre-intake (Enter Health History after first visit)</label></td>
+					<td><input type="radio" name="historyStatus" id="q1" onclick="historyQs(1)"></td></tr>
+					<td><label for="q2">a person with an existing MedRecord+</label></td>
+					<td><input type="radio" name="historyStatus" id="q2" onclick="historyQs(2)"></td></tr>
+					<td><label for="q3">ready to upload Health History form</label></td>
+					<td><input type="radio" name="historyStatus" id="q3" onclick="historyQs(3)"></td></tr>
+				</table>
 			<table id="healthHistory" class="center"></table>
 			<script>
 			function historyQs(num){
@@ -284,6 +283,7 @@
 			}
 			</script>
 			</div>
+			</span>
 			<div><div class="indent" id="printButton"><input type="button" value="Print Patient Entry" id="button" onclick="printForms()"></div></div>
 			<iframe name="printFrame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
 			<div class="indent">
